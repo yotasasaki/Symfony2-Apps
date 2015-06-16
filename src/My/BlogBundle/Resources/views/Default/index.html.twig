@@ -1,6 +1,13 @@
 {% extends 'MyBlogBundle::layout.html.twig' %}
 
 {% block body %}
+
+{% for flashMessage in app.session.flashbag.get('my_blog') %}
+    <div class="flash-notice">
+        {{ flashMessage }}
+    </div>
+{% endfor %}
+
 <h1>Blog posts</h1>
 <table>
     <tr>
