@@ -28,8 +28,8 @@ class DefaultController extends Controller
             if ($form->isValid()) {
                 //エンティティを永続化
                 $post = $form->getData();
-                $post->setCreatedAt(new \DateTime());
-                $post->setUpdatedAt(new \DateTime());
+                //$post->setCreatedAt(new \DateTime());
+                //$post->setUpdatedAt(new \DateTime());
 
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($post);
@@ -88,7 +88,7 @@ class DefaultController extends Controller
             if ($form->isValid()) {
                 //更新されたエンティティをデータベースに保存
                 $post = $form->getData();
-                $post->getUpdatedAt(new \DateTime());
+                //$post->setUpdatedAt(new \DateTime());
                 $em->flush();
                 $this->get('session')->getFlashBag()->set('my_blog', '記事を編集しました');
                 return $this->redirect($this->generateUrl('blog_index'));
