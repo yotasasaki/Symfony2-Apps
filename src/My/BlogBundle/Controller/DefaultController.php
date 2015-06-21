@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKarnel\Exception\NotFoundHttpExeption;;
 use My\BlogBundle\Entity\Post;
+use My\BlogBundle\Form\PostType;
 
 class DefaultController extends Controller
 {
@@ -18,10 +19,12 @@ class DefaultController extends Controller
 
     public function newAction(Request $request)
     {
-        $form = $this->createFormBuilder(new Post())
-            ->add('title')
-            ->add('body')
-            ->getForm();
+        //$form = $this->createFormBuilder(new Post())
+        //    ->add('title')
+        //   ->add('body')
+        //   ->getForm();
+
+        $form = $this->createForm(new PostType(), new Post());
 
         if ('POST' == $request->getMethod()) {
             $form->submit($request);
@@ -76,10 +79,12 @@ class DefaultController extends Controller
         }
 
         //フォームのビルド
-        $form = $this->createFormBuilder($post)
-            ->add('title')
-            ->add('body')
-            ->getForm();
+        //$form = $this->createFormBuilder($post)
+        //    ->add('title')
+        //    ->add('body')
+        //    ->getForm();
+
+        $form = $this->createForm(new PostType(), $post);
 
         //バリデーション
         $request = $this->getRequest();
