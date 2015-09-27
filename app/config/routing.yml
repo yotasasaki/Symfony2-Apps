@@ -1,3 +1,8 @@
+acme_rentacar:
+    resource: "@AcmeRentacarBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 blog:
     resource: "@MyBlogBundle/Resources/config/routing.yml"
     prefix:   /blog
