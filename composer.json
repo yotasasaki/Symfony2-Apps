@@ -17,6 +17,8 @@
         "symfony/monolog-bundle": "~2.4",
         "sensio/distribution-bundle": "~3.0",
         "sensio/framework-extra-bundle": "~3.0",
+        "stof/doctrine-extensions-bundle": "~1.1@dev",
+        "gedmo/doctrine-extensions": "dev-master",
         "incenteev/composer-parameter-handler": "~2.0"
     },
     "require-dev": {
