@@ -161,8 +161,8 @@ class Post
         return $this->updatedAt;
     }
 
-    /*
-     * set values before persist
+    /**
+     * set values bedore persist
      *
      * @ORM\PrePersist
      */
@@ -172,8 +172,8 @@ class Post
         $this->updatedAt = new \DateTime();
     }
 
-    /*
-     * set values before update
+    /**
+     * set values bedore update
      *
      * @ORM\PreUpdate
      */
