@@ -44,7 +44,8 @@ class ReservationController extends AppController
             }
         } elseif ($request->getSession()->has('reservation/location')) {
             $data = $request->getSession()->get('reservation/location');
-            $data['_token'] = $form['_token']->getData();
+            #$data['_token'] = $form['_token']->getData();
+            $form->bind($data);
         }
 
         return array(
