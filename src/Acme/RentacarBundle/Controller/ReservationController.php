@@ -9,8 +9,6 @@ use Symfony\Component\HttpFoundation\Request;
 /**
  * ReservationController.
  *
- * @auther Your Name
- *
  * @Route("/reservation")
  */
 class ReservationController extends AppController
@@ -67,7 +65,7 @@ class ReservationController extends AppController
      * @Route("/confirm", name="reservation_confirm")
      * @Template
      */
-    public function confirm(Request $request)
+    public function confirmAction(Request $request)
     {
         return array();
     }

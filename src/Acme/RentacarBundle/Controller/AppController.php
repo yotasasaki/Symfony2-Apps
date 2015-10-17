@@ -1,6 +1,6 @@
 <?php
 
-namespace Acme\RentacarBundles\Controller;
+namespace Acme\RentacarBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 

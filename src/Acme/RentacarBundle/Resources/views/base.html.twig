@@ -36,10 +36,13 @@
                       <li class="{% if menu == 'reservation' %}active{% endif %}">
                         <a href="{{ path('reservation_new') }}">予約</a>
                       </li>
+{#
                       <li class="{% if menu == 'car_class' %}active{% endif %}">
                         <a href="{{ path('car_class') }}">車種一覧</a>
                       </li>
+#}
                     </ul>
+{#
                     {% if _security.isAuthenticated %}
                       <ul class="nav pull-right">
                         <li class="dropdown">
@@ -59,6 +62,7 @@
                         <li><a href="{{ path('user_register') }}">会員登録</a></li>
                       </ul>
                     {% endif %}
+#}
                   {% endblock nav %}
                 </div>
               </div>
@@ -83,7 +87,7 @@
             </div>
 
             <footer>
-              <p class="copyright">&copy; 2012 Katsuhiro Ogawa</p>
+              <p class="copyright">&copy; </p>
             </footer>
           </div>
 
