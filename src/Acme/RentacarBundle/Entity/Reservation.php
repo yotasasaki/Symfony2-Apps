@@ -96,6 +96,7 @@ class Reservation
      * @ORM\JoinColumns({
      *   @ORM\JoinColumn(name="car_class_id", referencedColumnName="id")
      * })
+     * @Assert\NotBlank(groups={"reservation_car"})
      */
     private $carClass;
 
